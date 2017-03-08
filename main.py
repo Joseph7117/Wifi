@@ -8,7 +8,12 @@ app.secret_key = 'josephkagiri'
 
 @app.route('/')
 def website_root():
-    return render_template("index.html")
+    wifi = Wifi()
+    wifi_networks = wifi.Search()
+
+    print(wifi_networks)
+
+    return render_template("index.html", wifi_networks=wifi_networks)
 
 if __name__ == '__main__':
     app.run()

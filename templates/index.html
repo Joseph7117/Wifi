@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Wifi Detection
+{% endblock %}
+
+{% block body %}
+    <div class="main-dashboard">
+        {% if wifi_networks|length > 0 %}
+            <ul class="list-group">
+                {% for wn in wifi_networks %}
+                <li>
+                    {{ wn }}
+                </li>
+                {% endfor %}
+                {% endif %}
+            </ul>
+    </div>
+{% endblock %}
