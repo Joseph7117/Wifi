@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import render_template
-
-from models.app import Wifi
+from model.app import Wifi
 
 app = Flask(__name__) #Main Application
 app.secret_key = 'josephkagiri'
@@ -10,8 +9,6 @@ app.secret_key = 'josephkagiri'
 def website_root():
     wifi = Wifi()
     wifi_networks = wifi.Search()
-
-    print(wifi_networks)
 
     return render_template("index.html", wifi_networks=wifi_networks)
 

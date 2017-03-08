@@ -10,7 +10,7 @@
             <ul class="list-group">
                 {% for wn in wifi_networks %}
                 <li>
-                    {{ wn }}
+                    {{ wn['ssid'] }}
                 </li>
                 {% endfor %}
                 {% endif %}
