@@ -22,5 +22,3 @@ class Wifi():
             if cell.ssid == ssid:
                 return cell
         return False
-
-    #Get Wifi Networks from a saved List

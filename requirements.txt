@@ -1,3 +1,2 @@
 wifi==0.3.8
 Flask==0.12
-wireless==0.3.2

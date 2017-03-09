@@ -1,0 +1,12 @@
+#content
+{
+    margin-left: 200px;
+}
+.dual-list .list-group
+{
+    margin-top: 8px;
+}
+.list-left li
+{
+    cursor: pointer;
+}

@@ -1,19 +1,46 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Wifi Detection
+    WiFi Detection
 {% endblock %}
 
 {% block body %}
     <div class="main-dashboard">
-        {% if wifi_networks|length > 0 %}
-            <ul class="list-group">
-                {% for wn in wifi_networks %}
-                <li>
-                    {{ wn['ssid'] }}
-                </li>
-                {% endfor %}
-                {% endif %}
-            </ul>
+        <!-- Top Navigation Bar-->
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/" >Available WiFi Networks</a>
+                </div>
+            </div>
+        </nav>
+        <div class="row" id="content">
+            <div class="dual-list list-left col-md-5">
+                <div class="well text-center">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-search"></span>
+                                <input type="text" class="form-control" name="SearchList" placeholder="Search Network">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="btn-group">
+                                <a class="btn btn-default selector"><i class="glyphicon glyphicon-unchecked"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% if wifi_networks|length > 0 %}
+                    <ul class="list-group">
+                        {% for wn in wifi_networks %}
+                        <li class="list-group-item">
+                            {{ wn['ssid'] }}
+                        </li>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
