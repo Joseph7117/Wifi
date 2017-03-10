@@ -16,7 +16,7 @@
         </nav>
         <div class="row" id="content">
             <div class="dual-list list-left col-md-5">
-                <div class="well text-center">
+                <div class="well text-left">
                     <div class="row">
                         <div class="col-md-10">
                             <div class="input-group">
@@ -35,6 +35,7 @@
                         {% for wn in wifi_networks %}
                         <li class="list-group-item">
                             {{ wn['ssid'] }}
+                            <button class="btn-success pull-right">Connect</button>
                         </li>
                     {% endfor %}
                     {% endif %}

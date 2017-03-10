@@ -17,6 +17,13 @@
 <body>
         {% block body %}
         {% endblock %}
+        <footer class="navbar navbar-default navbar-fixed-bottom text-center">
+            <div class="copyrights" style="margin-top:20px">
+                <p>Joseph Kagiri &copy;<br/>
+                    <span>Available WiFi Networks</span></p>
+
+            </div>
+        </footer>
     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
