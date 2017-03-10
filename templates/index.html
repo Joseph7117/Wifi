@@ -37,7 +37,9 @@
                             {{ wn['ssid'] }}
                             <button class="btn-success pull-right">Connect</button>
                         </li>
-                    {% endfor %}
+                        {% endfor %}
+                    {% else %}
+                        <h4>No WiFi Networks Available</h4>
                     {% endif %}
                     </ul>
                 </div>
